@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+video {
+  height: 100%;
+  max-width: 100%;
+  background-color: #000;
+}
+
+div.video {
+  width: 384px;
+  height: 288px;
+  float: left;
+}
+
+div.video.novideo {
+  background-image: url(http://ymimg.b8cdn.com/assets/no-video-img-e52c250a18f2227ccb22841d0b276a05.jpg);
+  background-position: 50% 50%;
+}
+
+div.video.novideo video {
+  visibility: hidden;
+}

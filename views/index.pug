@@ -1,0 +1,17 @@
+extends layout
+
+block script
+  script(src='/js/peer.js')
+  script(src='/js/EventEmitter.js')
+  script(src='/js/client.js')
+
+block content
+  #buttons
+    button#btn1 Video and audio
+    button#btn2 Audio only
+    //button#btn3 No video or audio
+  #status Waiting...
+  #vidcontainer
+  #chat
+    textarea(disabled)
+    input(type='text')

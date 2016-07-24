@@ -1,0 +1,154 @@
+#chatwidget {
+  color: #a0a0a0;
+  font-family: sans-serif;
+  font-size: 12px;
+  background-color: #181717;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  min-height: 512px;
+}
+
+#login {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #181717;
+  opacity: 0.9;
+  padding: 24px 0;
+  text-align: center;
+}
+
+#messagebox {
+  width: 85%;
+  overflow: hidden;
+  border: 4px solid #181717;
+  border-right-width: 0;
+  border-bottom-width: 32px;
+  min-height: 512px;
+  height: 100%;
+  word-break: break-all;
+}
+
+#messages {
+  height: 100%;
+  padding: 8px;
+  background-color: #373737;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+#messages p {
+  margin: 0;
+}
+
+#users {
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 4px;
+}
+
+#users ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #373737;
+  border-radius: 8px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#users ul li {
+  display: block;
+  padding: 8px;
+  max-width: 100%;
+}
+
+#users ul li:hover {
+  cursor: pointer;
+  background-color: #454545;
+}
+
+#textinput {
+  height: 32px;
+  width: 85%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #181717;
+  padding: 4px;
+  padding-right: 0;
+}
+
+input[type="text"] {
+  border: none;
+  background: #373737;
+  padding: 4px;
+  height: 24px;
+  display: inline-block;
+}
+
+button {
+  height: 24px;
+  background: #008000;
+  border: none;
+  text-transform: lowercase;
+  color: #fff;
+  margin: 4px;
+}
+
+#textinput input[type="text"] {
+  display: block;
+  float: left;
+  border-right: 84px solid #181717;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 4px 8px;
+}
+
+#textinput input:focus {
+  outline: none;
+  background: #484848;
+}
+
+button:hover, button:focus {
+  outline: none;
+  background: #029402;
+}
+
+#textinput button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84px;
+  margin-right: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.me {
+  font-style: italic;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+  color: #c33;
+}
+
+.hidden {
+  display: none;
+}
+
+.bad {
+  background-color: #844 !important;
+}

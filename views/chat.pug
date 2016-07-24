@@ -1,0 +1,23 @@
+extends layout
+
+block css
+  link(rel='stylesheet', href='css/chatwidget.css')
+
+block script
+  script(src='/js/peer.js')
+  script(src='/js/EventEmitter.js')
+  script(src='/js/chat.js')
+
+block content
+  #videos
+  #chatwidget
+    #login
+      input#inputlogin(type='text', placeholder='Enter a username...')
+      button#loginbutton Join
+    #messagebox
+      #messages
+    #users
+      ul
+    #textinput
+      input#input(type='text', placeholder='Write a message...')
+      button#send Send

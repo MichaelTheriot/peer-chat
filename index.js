@@ -2,11 +2,11 @@ var express = require('express');
 var ExpressPeerServer = require('peer').ExpressPeerServer;
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
 app.use('/', require('./routes'));
+app.use(express.static(__dirname + '/public'));
 
 var server = require('http').createServer(app);
 var peerServer = ExpressPeerServer(server, {

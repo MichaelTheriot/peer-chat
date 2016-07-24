@@ -88,7 +88,7 @@ function join(audio, video) {
     myStream = stream;
     addVideo(stream, true);
     $status.textContent = 'Connecting...';
-    var peer = new Peer({host: '/', port: 8080, path: '/peerjs'});
+    var peer = new Peer({host: '/', port: location.port || 80, path: '/peerjs'});
     peer.on('call', function(call) {
       call.answer(myStream);
       call.on('stream', function(stream) {

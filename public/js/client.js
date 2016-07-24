@@ -1,5 +1,7 @@
 window.addEventListener('load', function() {
 
+var port = location.port || (location.protocol === 'https:' && 443) || (location.protocol === 'http:' && 80) || location.port;
+
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
 var $status = document.querySelector('#status');
@@ -88,7 +90,7 @@ function join(audio, video) {
     myStream = stream;
     addVideo(stream, true);
     $status.textContent = 'Connecting...';
-    var peer = new Peer({host: '/', port: location.port || 80, path: '/peerjs'});
+    var peer = new Peer({host: '/', port: port, path: '/peerjs'});
     peer.on('call', function(call) {
       call.answer(myStream);
       call.on('stream', function(stream) {
